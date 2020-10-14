@@ -1,0 +1,93 @@
+
+body {
+	background-color: #a89ba7;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+  }
+  
+  header,nav,footer,article {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	font-size: 18px;
+	align-items: center;
+
+  }
+main {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: 200px 1fr 1fr;
+	grid-template-rows: 80px 1fr 1fr 100px;
+	grid-gap: 1rem;
+	grid-template-areas:
+		"header header header"
+		"nav article-1 article-1"
+		"nav article-2 article-3"
+		"footer footer footer";
+  }
+  
+  header {
+	grid-area: header;
+	background-color: #1EAAFC;
+	background-image: linear-gradient(160deg, #728a78 0%, #9B8AE6 127%);
+  }
+  
+  nav {
+	min-height: 1000px;
+	grid-area: nav;
+	background-image: linear-gradient(203deg, #3EDFD7 0%, #29A49D 90%)
+  }
+  
+  nav ul {
+	list-style: none;
+  }
+  nav ul li{
+	text-decoration: none;
+	list-style: none;
+
+
+  }
+  .article-1 {
+	grid-area: article-1;
+	background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+  }
+  
+  .article-2 {
+	grid-area: article-2;
+	background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+  }
+  
+  .article-3 {
+	grid-area: article-3;
+	background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+  }
+  
+  footer {
+	grid-area: footer;
+	background-color: #6C52D9;
+	background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
+  }
+  
+
+
+  @media (max-width: 549px){
+	
+	main {
+		display: grid;
+		grid-template-columns: 1fr;
+			grid-template-areas:
+			"header"
+			"nav"
+			"article-1"
+			"article-2"
+			"article-3"
+			"footer"
+	  }
+ }
+
+ 
+
+  
